@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="mode-switchers">
+                <div class="guess-switch pasive">
+                    <a href="">GUESS</a>
+                </div>
+                <div class="riddle-switch active">
+                    <a href="">RIDDLE</a>
+                </div>
+            </div>
+
+            <div class="answers">
+                <p>I think the number is ...</p>
+                <form action="">
+                    
+                    <input name="input" type="number"  required maxlength="3" autocomplete="off">
+                    <button id="btn-input" class="btn-input">Input</button>
+                </form>
+                
+                <p class="prompt">press Enter to input</p>
+            </div>
+
+            <div class="fon"></div>
+            <img class="fon__left" src="img/left-fon.png" alt="">
+            <img class="fon__right" src="img/right-fon.png" alt="">
+
+            <div class="rezults">
+                <div class="rezults__left">
+                    <p id="number-of-try"> Number of attempts - <span id="NumberOfTry"></span></p>
+                    <p id="time-spend"> Best score - <span id="BestScore"></span></p>
+                </div>
+                <div id="startBtn" class="rezult__rigt">             
+                        <p >
+                            Start
+                        </p> 
+                </div>
+            </div>
+            <!-- left part -->
+            <div class="gender-switchers">
+                <img class="gender-switcher-male active" src="img/man-switcher.png" alt="">
+                <img class="gender-switcher-famale" src="img/Famlen-switcher.png" alt="">
+            </div>
+            <div class="gender-img-switchers">
+                <img id="maleIMG" class="active" src="img/man.png" alt="">
+                <img id="famaleIMG" class="" src="img/women.png" alt="">
+            </div> 
+                
+            <!-- rigt part-->
+           
+                <img id="robot"  class="robot " src="img/robot.png" alt=""> 
+                <img  class="robot-bootom" src="img/robot-botoom.png" alt="">
+               
+               
+                <p class="saying">
+                    <img id="sayingArea" src="img/saying.png" alt="">
+                    <span id="robotOutput" class="saying_input"></span>
+                </p>
+            
+        </div>
+    </section>
+
+
+   <script type="module" src="js/main.js"></script>
+   <!-- <script type="modole" src="js/win.js"></script> -->
+  
+   <script>
+    /*
+    Задание:
+    Напишите сценарии "Игра 'Угадай число'". Суть игры - угадать за меньшее количество попыток число, которое загадал сценарий.
+    Каждый раз, когда игрок пытается угадать число, сценарий выводит подсказку - меньшее или большее число было загадано сценарием.
+    Сценарий загадывает число только один раз в начале игры и это число не меняется до завершения игры.
+    При завершении игры выведите пользователю информацию о том, с какой попытки угадано значение и сколько было потрачено на это времени.
+
+    Для генерации случайного числа используйте следующий код:
+    let randomValue = Math.floor(Math.random() * 101); // случайное значение от 0 до 100 будет записано в переменную randomValue
+
+    Доповнення:
+    на сайті буде вибір хлопець чи дівчинка
+    зверху буде вибір режима чи ти загадуєш чи компютер;
+    
+    Пример игры:
+    Сценарий: я загадал случайное значение от 0 до 100
+    Пользователь: 50
+    Сценарий: я загадал значение больше, чем 50
+    Пользователь: 75
+    Сценарий: я загадал значение меньше, чем 75
+    Пользователь: 62
+    Сценарий: я загадал значение меньше, чем 62
+    Пользователь: 56
+    Сценарий: Правильно! Загаданное значение 56. Вы угадали с 4й попытки за 10 сек.
+    */
+</script>
+
+</body>
+</html>
