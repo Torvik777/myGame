@@ -98,7 +98,7 @@ class Robot{
             this.#isGameStarted = true;
             // console.log(this.#numberToRiddle);
             let rezults = document.querySelector(".rezults");
-            
+            this.#attemptsCounter = 0;
             rezults.style.transition = "0s";
             rezults.style.display = "none";}
     }
